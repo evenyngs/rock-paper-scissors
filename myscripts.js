@@ -16,6 +16,11 @@ function computerPlay() {
     return n;
 }
 
+function userChoice () {
+    const userChoice = prompt("Do you choose rock, paper, or scissors?").toLowerCase();
+    return userChoice;
+}
+
 
 function playRound(playerSelection, computerSelection) {
     console.log("Player: " + playerSelection)
@@ -45,10 +50,17 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+//const playerSelection = userChoice();
+//const computerSelection = computerPlay();
 
-//function game() {
+//console.log(playRound(playerSelection, computerSelection));
 
-//}
+function game() {
+    console.log(playRound(userChoice(), computerPlay()));
+    console.log(playRound(userChoice(), computerPlay()));
+    console.log(playRound(userChoice(), computerPlay()));
+    console.log(playRound(userChoice(), computerPlay()));
+    console.log(playRound(userChoice(), computerPlay()));
+}
+
+game();
