@@ -1,0 +1,41 @@
+body {
+    background-color: cornsilk;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 150px;
+    background-color: crimson;
+}
+
+
+
+.b {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 85px;
+    width: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.b:hover {
+    border: 1px solid white;
+    opacity: 1;
+}
