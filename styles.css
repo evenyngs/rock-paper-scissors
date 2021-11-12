@@ -53,5 +53,6 @@ h2 {
 
 #rock:hover, #paper:hover, #scissors:hover {
     border: 1px solid white;
+    transform: scale(1.05);
     opacity: 1;
 }
