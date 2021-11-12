@@ -14,13 +14,14 @@ function computerPlay() {
         n = s;
     }
     return n;
-}
+};
 
+/*
 function userChoice () {
     const userChoice = prompt("Do you choose rock, paper, or scissors?").toLowerCase();
     return userChoice;
 }
-
+*/
 
 function playRound(playerSelection, computerSelection) {
     console.log("Player: " + playerSelection)
@@ -30,25 +31,31 @@ function playRound(playerSelection, computerSelection) {
     }
     //player chooses rock
     else if (playerSelection == r && computerSelection == s) {
+        pScore += 1;
         return ("You win. Rock beats scissors.")
     } else if (playerSelection == r && computerSelection == p) {
+        cScore += 1;
         return ("You lose. Paper beats rock.")
     }
 
     //player chooses paper
     else if (playerSelection == p && computerSelection == r) {
+        pScore += 1;
         return ("You win. Paper beats rock.")
     } else if (playerSelection == p && computerSelection == s) {
+        cScore += 1
         return ("You lose. Scissors beats paper.")
     }
     //player chooses scissors
     else if (playerSelection == s && computerSelection == p) {
+        pScore += 1;
         return ("You win. Scissors beats paper.")
     } else if (playerSelection == s && computerSelection == r) {
+        cScore += 1;
         return ("You lose. Rock beats scissors.")
     }
 
-}
+};
 
 //const playerSelection = userChoice();
 //const computerSelection = computerPlay();
@@ -61,6 +68,32 @@ function game() {
     console.log(playRound(userChoice(), computerPlay()));
     console.log(playRound(userChoice(), computerPlay()));
     console.log(playRound(userChoice(), computerPlay()));
-}
+};
 
-game();
+//game();
+
+const buttons = document.querySelectorAll('button');
+
+const display = document.querySelector(".results");
+
+const player = document.querySelector(".player");
+
+const computer = document.querySelector(".computer");
+
+let pScore = 0;
+
+let cScore = 0;
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        display.innerHTML = playRound(button.id, computerPlay());
+        player.innerHTML = "Player: " + pScore;
+        computer.innerHTML = "Computer: " + cScore;
+        if (pScore>=5) {
+            player.innerHTML = "WINNER";
+        } else if (cScore >=5) {
+            computer.innerHTML = "WINNER";
+        };
+    });
+});
+

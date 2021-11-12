@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="\myscripts.js"></script>
 </head>
 <body>
+
     <h2>Play Rock, Paper, Scissors!</h2>
     <div class="container">
-        <button class="b" type="button">Rock</button>
-        <button class="b" type="button">Paper</button>
-        <button class="b" type="button">Scissors</button>
+        <button id="rock" type="button">Rock</button>
+        <button id="paper" type="button">Paper</button>
+        <button id="scissors" type="button">Scissors</button>
     </div>
+
+    <div class="score">
+        <div class="player">Player: 0</div>
+        <div class="computer">Computer: 0</div>
+    </div>
+
+    <div class="results">
+        First to win 5 points wins! <br>
+    </div>
+
+    <script src="myscripts.js"></script>
 
 </body>
 </html>
